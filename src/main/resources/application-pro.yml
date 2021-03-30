@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://106.15.45.47:3306/myblog?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=GMT%2B8
+    username: myblog
+    password: LXMXLMX666
+
+logging:
+  level:
+    root: warn
+    com.ustc: info
+
+mybatis:
+  type-aliases-package: com.ustc.pojo
+  mapper-locations: classpath:com/ustc/mapper/*.xml
+
+pagehelper:                #分页插件
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params:
